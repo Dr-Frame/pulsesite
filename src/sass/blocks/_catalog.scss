@@ -39,15 +39,20 @@
     }
     &__content {
         margin-top: 60px;
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
     }
     .catalog-item {
         width: 300px;
         min-height: 440px;
         border: 2.0px solid #e8e8e8;
         padding: 20px 20px 26px 20px;
+        overflow: hidden;
+        margin-bottom: 20px;
         &__img {
             max-width: 100%;
-            height: 150px;
+            height: 200px;
             display: block;
             margin: 0 auto;
         }
@@ -79,11 +84,10 @@
             color: $main-color;
         }
         hr {
-            margin-top: 20px;
+            margin: 20px 0 20px 0;
             color: #e8e8e8;
         }
         &__footer {
-            margin-top: 20px;
             display: flex;
             justify-content: space-between;
         }
@@ -105,18 +109,63 @@
             font-weight: 700;
             color: #050505;
         }
-        &__btn {
-            width: 131px;
-            height: 40px;
-            background-color: $main-color;
-            border-radius: 5.0px;
-            border: none;
+        &__wrapper {
+            display: flex;
+            width: calc(200% + 40px);
+        }
+        &__content{
+            width: 50%;
+            margin-right: 0px;
+            transform: translateX(-100%);
+            transition: 0.5s all;
+            &_active {
+                transform: translateX(0%);
+                margin-right: 20px;
+            }
+        }
+        &__list {
+            width: 50%;
+            margin-left: 20px;
+            transform: translateX(0%);
+            padding-right: 20px;
+            transition: 0.5s all;
+            padding-left: 19px;
+            margin-bottom: 0;
+            list-style-type: none;
+            &_active {
+                transform: translateX(-100%);
+                margin-right: 0px;
+            }
+            li {
+                position: relative;
+                font-size: 14px;
+                line-height: 1.2;
+                font-weight: 300;
+                color: #555555;
+                margin-bottom: 20px;
+                &::before {
+                    content: '';
+                    position: absolute;
+                    width: 5px;
+                    height: 5px;
+                    background-color: $main-color;
+                    left: -14px;
+                    top: 5px;
+                }
+            }
+        }
+        &__back {
+            display: block;
+            text-align: center;
+            margin-top: 15px;
             font-size: 14px;
             line-height: 1.2;
             font-weight: 500;
-            text-transform: uppercase;
-            color: #ffffff;
+            text-decoration: underline;
+            color: $main-color;
+            margin-top: 64px;
         }
+
     }
 
 }
