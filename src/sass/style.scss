@@ -10,6 +10,13 @@
     margin: 0 auto;
 }
 
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+}
+
 @import 'blocks/promo';
 @import 'blocks/header';
 @import 'blocks/buttons';
@@ -19,4 +26,6 @@
 @import 'blocks/consultation';
 @import 'blocks/forms';
 @import 'blocks/carousel';
-@import 'blocks/catalog'
+@import 'blocks/catalog';
+@import 'blocks/review';
+@import 'blocks/footer';

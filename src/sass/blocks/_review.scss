@@ -1,0 +1,43 @@
+.review {
+    .title {
+        margin-bottom: 70px;
+    }
+    &__list {
+        margin-bottom: 71px;
+    }
+    &__item {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-bottom: 102px;
+    }
+    &__photo {
+        display: block;
+        margin-right: 62px;
+    }
+    &__name {
+        margin-bottom: 10px;
+
+        font-size: 18px;
+        line-height: 1.2;
+        font-weight: 700;
+        color: #0d0d0d;
+    }
+    &__count {
+        display: block;
+        margin-bottom: 19px;
+
+        font-size: 14px;
+        line-height: 1.2;
+        font-weight: 300;
+        color: #646464;
+    }
+    &__comment {
+        font-size: 16px;
+        line-height: 1.2;
+        font-weight: 500;
+        color: #0d0d0d;
+        margin-bottom: 0;
+    }
+
+}
